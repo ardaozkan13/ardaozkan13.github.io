@@ -7,7 +7,7 @@
 <meta name="description" content="Arda Özkan — sistem mühendisi. Hava aracı sistem entegrasyonu, fonksiyonel test ve teknik dokümantasyon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..800&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
 <style>
   /* ------------------------------------------------------------------
      Kişisel bağlantılar: boş bırakılan satır sayfada gösterilmez.
@@ -24,9 +24,11 @@
     --rule: rgba(30, 42, 46, 0.55);
     --gutter: clamp(16px, 4vw, 48px);
     --measure: 64ch;
-    /* Yazı tipi: başka bir Google Fonts ailesi için <head>'deki fonts.googleapis.com
-       bağlantısını ve bu satırı birlikte değiştirin. */
-    --font: "Archivo", system-ui, sans-serif;
+    /* Yazı tipleri: başka bir Google Fonts ailesi için <head>'deki fonts.googleapis.com
+       bağlantısını ve ilgili satırı birlikte değiştirin. */
+    --font-name: "Work Sans", system-ui, sans-serif;        /* büyük isim */
+    --font-head: "Space Grotesk", system-ui, sans-serif;    /* başlıklar */
+    --font-body: "JetBrains Mono", ui-monospace, monospace; /* gövde metni */
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -48,10 +50,10 @@
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position: -1px -1px;
     color: var(--ink);
-    font-family: var(--font);
-    font-size: 17px;
-    line-height: 1.6;
-    font-variation-settings: "wdth" 100;
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+
   }
   a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   a:hover { color: var(--pencil); }
@@ -74,13 +76,13 @@
     display: flex; justify-content: space-between; align-items: center;
     padding: 14px var(--gutter);
     border-bottom: 1px solid var(--rule);
-    font-variation-settings: "wdth" 75;
+
     font-size: 15px;
   }
   .topbar .mark { font-weight: 700; letter-spacing: 0.02em; }
   .lang { display: flex; border: 1px solid var(--ink); }
   .lang button {
-    font: inherit; font-variation-settings: "wdth" 75; font-weight: 600;
+    font: inherit; font-weight: 600;
     background: none; border: 0; color: var(--ink);
     padding: 4px 12px; cursor: pointer; min-height: 32px;
   }
@@ -101,20 +103,20 @@
     grid-column: 2; grid-row: 2;
     font-size: clamp(56px, 11vw, 148px);
     line-height: 0.98;
-    font-weight: 780;
-    font-variation-settings: "wdth" 112;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    font-family: var(--font-name);
     position: relative;
     z-index: 1;
   }
   .name span { display: block; }
-  .name .first { font-weight: 300; font-variation-settings: "wdth" 125; }
+  .name .first { font-weight: 250; }
 
   .note {
     font-size: 15px; line-height: 1.4;
     max-width: 22ch;
     position: relative; z-index: 1;
-    font-variation-settings: "wdth" 88;
+
   }
   .note b { display: block; font-weight: 650; }
   .note .tag {
@@ -159,12 +161,12 @@
   }
   .block h2 {
     font-size: 15px; font-weight: 650;
-    font-variation-settings: "wdth" 75;
+
     color: var(--ink-soft);
     padding-top: 6px;
   }
   .block .body { max-width: var(--measure); }
-  .lead { font-size: clamp(20px, 2.2vw, 25px); line-height: 1.45; font-weight: 400; }
+  .lead { font-size: clamp(17px, 1.7vw, 20px); line-height: 1.6; font-weight: 400; }
   .body p + p { margin-top: 1em; }
 
   .timeline { list-style: none; border-left: 1.5px solid var(--ink); }
@@ -175,7 +177,7 @@
     width: 10px; height: 10px; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 50%;
   }
   .timeline li:first-child::before { background: var(--ink); }
-  .timeline .when { font-variation-settings: "wdth" 75; color: var(--ink-soft); font-size: 15px; }
+  .timeline .when { color: var(--ink-soft); font-size: 15px; }
   .timeline .what { font-weight: 650; font-size: 19px; }
 
   .areas { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); max-width: 760px; gap: 0; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
@@ -186,7 +188,7 @@
   .contact { list-style: none; }
   .contact li { display: grid; grid-template-columns: 110px 1fr; padding: 10px 0; border-bottom: 1px dashed var(--rule); }
   .contact li:first-child { padding-top: 0; }
-  .contact .k { color: var(--ink-soft); font-variation-settings: "wdth" 75; }
+  .contact .k { color: var(--ink-soft); }
   .contact a { font-weight: 600; word-break: break-all; }
 
   @media (max-width: 720px) {
@@ -199,7 +201,7 @@
     grid-template-columns: 2.2fr 1fr 1fr 1fr;
     border-top: 2px solid var(--ink);
     background: var(--paper-2);
-    font-variation-settings: "wdth" 75;
+
     font-size: 14px;
   }
   .titleblock > div { padding: 10px 14px; border-left: 1px solid var(--ink); min-width: 0; }
@@ -207,7 +209,7 @@
   .titleblock > div:nth-child(n+5) { border-top: 1px solid var(--ink); }
   .titleblock .k { color: var(--ink-soft); display: block; font-size: 12px; }
   .titleblock .v { font-weight: 650; font-size: 15px; }
-  .titleblock .big { font-variation-settings: "wdth" 100; font-size: 22px; font-weight: 700; line-height: 1.2; }
+  .titleblock .big { font-size: 22px; font-weight: 700; line-height: 1.2; }
   @media (max-width: 720px) {
     .titleblock { grid-template-columns: 1fr 1fr; }
     .titleblock > div:first-child { grid-column: 1 / -1; grid-row: auto; }
@@ -216,6 +218,12 @@
     .titleblock > div:nth-child(odd):not(:first-child) { border-left: 1px solid var(--ink); }
     .titleblock > div:nth-child(even) { border-left: 0; }
   }
+
+  /* Başlık ailesi */
+  .topbar .mark, .lang button, .note b, .block h2, .timeline .what, .areas b, .titleblock .big {
+    font-family: var(--font-head);
+  }
+  .block h2 { font-size: 16px; }
 </style>
 </head>
 <body>
