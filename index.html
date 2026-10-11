@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arda Özkan</title>
-<meta name="description" content="Arda Özkan — sistem mühendisi. İHA sistem entegrasyonu, fonksiyonel test ve teknik dokümantasyon.">
+<meta name="description" content="Arda Özkan — sistem mühendisi. Hava aracı sistem entegrasyonu, fonksiyonel test ve teknik dokümantasyon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
@@ -24,6 +24,9 @@
     --rule: rgba(30, 42, 46, 0.55);
     --gutter: clamp(16px, 4vw, 48px);
     --measure: 64ch;
+    /* Yazı tipi: başka bir Google Fonts ailesi için <head>'deki fonts.googleapis.com
+       bağlantısını ve bu satırı birlikte değiştirin. */
+    --font: "Archivo", system-ui, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -45,7 +48,7 @@
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position: -1px -1px;
     color: var(--ink);
-    font-family: "Archivo", system-ui, sans-serif;
+    font-family: var(--font);
     font-size: 17px;
     line-height: 1.6;
     font-variation-settings: "wdth" 100;
@@ -231,7 +234,7 @@
 
       <h1 class="name" id="name"><span class="first">Arda</span><span>Özkan</span></h1>
 
-      <p class="note n1" data-anchor="0.1,0.32"><span class="tag">1</span><span><b data-i18n="n1t">Sistem mühendisi</b><span data-i18n="n1">Savunma havacılığı, insansız hava araçları</span></span></p>
+      <p class="note n1" data-anchor="0.1,0.32"><span class="tag">1</span><span><b data-i18n="n1t">Sistem mühendisi</b><span data-i18n="n1">Savunma havacılığı, hava aracı sistemleri</span></span></p>
       <p class="note n2" data-anchor="0.64,0.3"><span class="tag">2</span><span><b data-i18n="n2t">Entegrasyon ve test</b><span data-i18n="n2">Alt sistemlerin uçağa bağlandığı yer</span></span></p>
       <p class="note n3" data-anchor="0.07,0.76"><span class="tag">3</span><span><b data-i18n="n3t">Makine mühendisi</b><span data-i18n="n3">Lisans eğitimi</span></span></p>
       <p class="note n4" data-anchor="0.93,0.74"><span class="tag">4</span><span><b data-i18n="n4t">Ankara</b><span data-i18n="n4">Türkiye</span></span></p>
@@ -240,7 +243,7 @@
     <section class="block" aria-labelledby="h-about">
       <h2 id="h-about" data-i18n="hAbout">Hakkımda</h2>
       <div class="body">
-        <p class="lead" data-i18n="about1">İnsansız hava araçlarında sistem entegrasyonu ve fonksiyonel test üzerine çalışıyorum: bir alt sistemin masadaki halinden uçaktaki haline geçtiği aşama.</p>
+        <p class="lead" data-i18n="about1">Hava araçlarında sistem entegrasyonu ve fonksiyonel test üzerine çalışıyorum: bir alt sistemin masadaki halinden uçaktaki haline geçtiği aşama.</p>
         <p data-i18n="about2">Makine mühendisliği eğitiminin ardından ticari havacılıkta çalıştım, ardından savunma havacılığına geçtim. Mekanik donanım, aktüatörler, test düzenekleri ve bunları tarif eden teknik şartnameler günlük işimin büyük kısmını oluşturuyor.</p>
       </div>
     </section>
@@ -249,7 +252,7 @@
       <h2 id="h-path" data-i18n="hPath">Yol</h2>
       <div class="body">
         <ol class="timeline">
-          <li><div class="when" data-i18n="t1w">2025'ten bu yana</div><div class="what" data-i18n="t1">Sistem mühendisi, savunma havacılığı</div><div data-i18n="t1d">İHA sistemleri: entegrasyon, fonksiyonel test, teknik dokümantasyon</div></li>
+          <li><div class="when" data-i18n="t1w">2025'ten bu yana</div><div class="what" data-i18n="t1">Sistem mühendisi, savunma havacılığı</div><div data-i18n="t1d">Hava aracı sistemleri: entegrasyon, fonksiyonel test, teknik dokümantasyon</div></li>
           <li><div class="when" data-i18n="t2w">Öncesi</div><div class="what" data-i18n="t2">Ticari havacılık</div></li>
           <li><div class="when" data-i18n="t3w">Eğitim</div><div class="what" data-i18n="t3">Makine mühendisliği, lisans</div></li>
         </ol>
@@ -297,15 +300,15 @@
 
   const I18N = {
     en: {
-      n1t: "Systems engineer", n1: "Defence aviation, unmanned aerial vehicles",
+      n1t: "Systems engineer", n1: "Defence aviation, air vehicle systems",
       n2t: "Integration and test", n2: "Where subsystems meet the aircraft",
       n3t: "Mechanical engineer", n3: "Undergraduate degree",
       n4t: "Ankara", n4: "Türkiye",
       hAbout: "About",
-      about1: "I work on system integration and functional testing of unmanned aerial vehicles: the stage where a subsystem goes from the bench to the aircraft.",
+      about1: "I work on system integration and functional testing of air vehicles: the stage where a subsystem goes from the bench to the aircraft.",
       about2: "After studying mechanical engineering I worked in commercial aviation, then moved into defence aviation. Mechanical hardware, actuators, test rigs and the technical specifications that describe them make up most of my day.",
       hPath: "Path",
-      t1w: "Since 2025", t1: "Systems engineer, defence aviation", t1d: "UAV systems: integration, functional testing, technical documentation",
+      t1w: "Since 2025", t1: "Systems engineer, defence aviation", t1d: "Air vehicle systems: integration, functional testing, technical documentation",
       t2w: "Before", t2: "Commercial aviation",
       t3w: "Education", t3: "Mechanical engineering, BSc",
       hAreas: "What I work on",
